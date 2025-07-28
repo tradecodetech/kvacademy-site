@@ -8,27 +8,17 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f8f8f8;
-      color: #222;
+      background: #f0f4f8;
+      color: #1a1a1a;
     }
     header {
-      background: linear-gradient(to right, #111, #444);
+      background: linear-gradient(to right, #0077b6, #0096c7);
       color: white;
       padding: 2rem 1rem;
       text-align: center;
     }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-      text-transform: uppercase;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      color: #ddd;
-    }
     nav {
-      background: #222;
+      background: #023e8a;
       padding: 0.75rem 1rem;
       text-align: center;
     }
@@ -41,54 +31,31 @@
     nav a:hover {
       text-decoration: underline;
     }
-    section.hero {
+    .hero {
       padding: 3rem 1rem;
-      background: url('background-image.jpg') no-repeat center center/cover;
-      color: white;
       text-align: center;
+      background: #caf0f8;
     }
-    section.hero h2 {
+    .hero h2 {
       font-size: 2rem;
     }
-    section.hero p {
-      font-size: 1.1rem;
+    .hero p {
       max-width: 700px;
       margin: 1rem auto;
+      font-size: 1.1rem;
     }
     .cta-button {
       display: inline-block;
       margin-top: 1rem;
       padding: 0.75rem 1.5rem;
-      background: #fff;
-      color: #222;
-      text-decoration: none;
+      background: #0077b6;
+      color: white;
       border-radius: 5px;
-      transition: background 0.3s;
-    }
-    .cta-button:hover {
-      background: #ddd;
-    }
-    section.media {
-      padding: 3rem 1rem;
-      background: #fff;
-      text-align: center;
-    }
-    .media-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-    .media-container iframe,
-    .media-container img {
-      width: 300px;
-      height: 200px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-decoration: none;
     }
     footer {
-      background: #111;
-      color: #aaa;
+      background: #03045e;
+      color: white;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
@@ -98,43 +65,24 @@
 <body>
   <header>
     <h1>Keen Visions Academy</h1>
-    <p>Where Legacy Meets Leadership</p>
+    <p>Empowering Youth Through Skill, Vision, and Purpose</p>
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#programs">Programs</a>
-    <a href="#media">Media</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="getinvolved.html">Get Involved</a>
   </nav>
 
   <section class="hero">
-    <h2>Empowering Youth Through Skill, Vision, and Brotherhood</h2>
-    <p>
-      Born from the trials and triumphs of real-world experience, KV Academy exists to transform the next generation. Whether through trading, tech, or life mentorship, we build systems of value for young kings and queens ready to rise. We’ve spoken in schools, walked the streets, and created solutions from the concrete up.
-    </p>
-    <p>
-      Our programs give teens a real shot: funded trading accounts, code-based thinking, entrepreneurial mindsets, and healing through community. We don’t just talk it — we live it.
-    </p>
-    <a href="#contact" class="cta-button">Join the Movement</a>
-  </section>
-
-  <section class="media" id="media">
-    <h2>In Action: Real Work, Real Impact</h2>
-    <div class="media-container">
-      <iframe src="https://www.tiktok.com/embed/v2/7503268444024884526" allowfullscreen></iframe>
-      <iframe src="https://www.tiktok.com/embed/v2/7520064586142321934" allowfullscreen></iframe>
-      <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/share/v/1AgxHzQxyE/" allowfullscreen></iframe>
-      <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/share/v/1EWGCVy27T/" allowfullscreen></iframe>
-      <img src="/mnt/data/ead12890-099f-4568-83c3-515f580f42f1.png" alt="Team Photo 1">
-      <img src="/mnt/data/b87b17b3-32c9-4406-adc7-9f74eb856a3d.png" alt="Coaching Moment">
-      <img src="/mnt/data/6bae4b05-1752-4b25-9152-fb44da53b8cb.png" alt="Full Team + Mentors">
-    </div>
+    <h2>Welcome to the New KV Academy</h2>
+    <p>This version features a refreshed color palette and modern layout. Navigation links will lead to expanded program pages, which you can add next.</p>
+    <a class="cta-button" href="programs.html">Explore Programs</a>
   </section>
 
   <footer>
-    &copy; 2025 Keen Visions Academy | KVAcademy.org
+    &copy; 2025 Keen Visions Academy
   </footer>
 </body>
 </html>
