@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About KV Academy</title>
+    <title>KV Academy — Empowering Youth</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -18,21 +19,25 @@
 
     <nav>
         <a href="index.html">Home</a>
-        <a class="active" href="about.html">About</a>
+        <a href="about.html">About</a>
         <a href="programs.html">Programs</a>
         <a href="gallery.html">Gallery</a>
         <a href="getinvolved.html">Get Involved</a>
         <a href="contact.html">Contact</a>
     </nav>
 
+    <!-- Mobile Menu Icon -->
     <div class="mobile-menu" id="mobileMenuBtn">
-        <div></div><div></div><div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
 </header>
 
+<!-- Mobile Dropdown Nav -->
 <div class="mobile-nav" id="mobileNav">
     <a href="index.html">Home</a>
-    <a class="active" href="about.html">About</a>
+    <a href="about.html">About</a>
     <a href="programs.html">Programs</a>
     <a href="gallery.html">Gallery</a>
     <a href="getinvolved.html">Get Involved</a>
@@ -41,126 +46,108 @@
 
 
 <!-- ===========================
-     HERO — ABOUT
+     HERO
 =========================== -->
-<section class="hero about-hero fade-in">
+<section class="hero fade-in">
     <div class="hero-overlay">
-        <h1>Building Leaders. Shaping Futures.</h1>
-        <p>KV Academy exists to give youth the tools, guidance, and structure they need to rise.</p>
+        <h1>Empowering Youth Through Purpose, Skill-Building & Community.</h1>
+        <p>KV Academy is where young leaders discover confidence, discipline, and real-world opportunity.</p>
+        <a href="getinvolved.html" class="btn">Get Involved</a>
     </div>
 </section>
 
 
 <!-- ===========================
-     ORIGIN STORY
+     WHY KV ACADEMY
 =========================== -->
 <section class="section fade-in">
-    <h2>Our Story</h2>
+    <h2>Why KV Academy?</h2>
 
     <p>
-        KV Academy began with a simple mission: to create a space where young people could grow through 
-        **discipline, skill-building, entrepreneurship, and real-world responsibility**.
-    </p>
-
-    <p style="margin-top:15px;">
-        What started as community mentorship evolved into a structured youth academy — combining
-        financial literacy, trading education, entrepreneurship (like lawn care and service projects),
-        and real-life character development.
-    </p>
-
-    <p style="margin-top:15px;">
-        KV Academy's foundation is built on **purpose**, **confidence**, and **leadership** — giving young 
-        men and women a fighting chance to succeed in a world that demands creativity, resilience, and integrity.
+        We help the next generation build <strong>leadership</strong>, <strong>financial literacy</strong>,
+        <strong>discipline</strong>, and <strong>purpose</strong> through hands-on learning and real community engagement.
     </p>
 </section>
 
 
 <!-- ===========================
-     MISSION + VISION
+     PROGRAMS (PREVIEW)
 =========================== -->
 <section class="section fade-in">
-    <h2>Mission & Vision</h2>
+    <h2>Our Programs</h2>
 
     <div class="program-grid">
 
         <div class="program-card">
-            <h3>Our Mission</h3>
-            <p>
-                To empower youth through structured training in entrepreneurship, discipline, 
-                financial literacy, and personal development — preparing them to lead with confidence.
-            </p>
+            <h3>Lawn Care Entrepreneurship</h3>
+            <p>Youth-led business training through service work, teamwork, budgeting, and financial responsibility.</p>
         </div>
 
         <div class="program-card">
-            <h3>Our Vision</h3>
-            <p>
-                A generation of young leaders who create opportunity, build community, and 
-                pursue excellence in everything they do.
-            </p>
+            <h3>Digital Trading Lab</h3>
+            <p>Hands-on market education, risk management, macro awareness, and applied digital skills.</p>
+        </div>
+
+        <div class="program-card">
+            <h3>Leadership & Literacy</h3>
+            <p>Confidence development, communication skills, financial literacy, and real-world decision-making.</p>
         </div>
 
     </div>
+
+    <center style="margin-top:30px;">
+        <a href="programs.html" class="btn">Explore All Programs</a>
+    </center>
 </section>
 
 
 <!-- ===========================
-     CORE VALUES GRID
+     GALLERY / CAROUSEL
 =========================== -->
-<section class="section fade-in">
-    <h2>Core Values</h2>
+<section id="gallery" class="section fade-in">
+    <h2>See Our Work in Action</h2>
 
-    <div class="program-grid">
+    <div class="carousel-container">
 
-        <div class="program-card">
-            <h3>Discipline</h3>
-            <p>We teach consistent action, responsibility, and the importance of structure.</p>
+        <div class="carousel-track">
+
+            <!-- IMAGES -->
+            <div class="slide"><img src="images/gallery/photo_2025-12-09_11-30-31.jpg" alt=""></div>
+            <div class="slide"><img src="images/gallery/photo_2025-12-09_11-30-25.jpg" alt=""></div>
+            <div class="slide"><img src="images/gallery/photo_2025-12-09_11-50-52.jpg" alt=""></div>
+            <div class="slide"><img src="images/gallery/photo_2025-12-09_11-51-14.jpg" alt=""></div>
+            <div class="slide"><img src="images/gallery/photo_2025-12-09_12-17-42.jpg" alt=""></div>
+            <div class="slide"><img src="images/gallery/photo_2025-12-09_12-17-47.jpg" alt=""></div>
+
+            <!-- VIDEOS -->
+            <div class="slide">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/gallery/IMG_9959.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="slide">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/gallery/video_2025-12-09_11-30-36.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="slide">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/gallery/IMG_9941.mp4" type="video/mp4">
+                </video>
+            </div>
+
         </div>
 
-        <div class="program-card">
-            <h3>Leadership</h3>
-            <p>Students learn to guide their peers, communicate, and make confident decisions.</p>
-        </div>
-
-        <div class="program-card">
-            <h3>Entrepreneurship</h3>
-            <p>Hands-on business skills — from service work to digital skills and financial literacy.</p>
-        </div>
-
-        <div class="program-card">
-            <h3>Community</h3>
-            <p>Young people grow stronger when they serve their city, uplift each other, and stay connected.</p>
-        </div>
+        <button class="carousel-btn prev">❮</button>
+        <button class="carousel-btn next">❯</button>
 
     </div>
-</section>
 
-
-<!-- ===========================
-     FOUNDER / LEADERSHIP
-=========================== -->
-<section class="section fade-in">
-    <h2>Our Leadership</h2>
-
-    <div class="program-grid">
-
-        <div class="program-card">
-            <h3>Nicholas Contee — Founder</h3>
-            <p>
-                Nicholas brings experience in trading, coaching, technology, entrepreneurship, 
-                and youth mentorship. His vision: build a place where discipline and opportunity 
-                meet — changing the trajectory for young men and women across the community.
-            </p>
-        </div>
-
-        <div class="program-card">
-            <h3>Community Partners</h3>
-            <p>
-                KV Academy collaborates with local businesses, entrepreneurs, educators, and 
-                organizations who believe in shaping the next generation.
-            </p>
-        </div>
-
-    </div>
+    <center>
+        <a href="gallery.html" class="btn">View Full Gallery</a>
+    </center>
 </section>
 
 
@@ -168,14 +155,34 @@
      CALL TO ACTION
 =========================== -->
 <section class="section fade-in">
-    <h2>Be Part of the Mission</h2>
+    <h2>Join the Movement</h2>
 
-    <p>KV Academy grows through people like you — mentors, volunteers, supporters, and parents.</p>
+    <p>
+        Whether you're a parent, volunteer, business owner, or mentor — KV Academy welcomes you.
+        Help us build a stronger future for our youth.
+    </p>
 
     <center style="margin-top:25px;">
-        <a href="getinvolved.html" class="btn">Get Involved</a>
+        <a href="getinvolved.html" class="btn">Get Involved Today</a>
     </center>
 </section>
 
 
 <!-- ===========================
+     FOOTER
+=========================== -->
+<footer>
+    <p>© 2025 KV Academy — Empowering the Next Generation.</p>
+    <p>info@kvacademy.org</p>
+</footer>
+
+
+<!-- ===========================
+     SCRIPTS
+=========================== -->
+<script src="js/mobile-menu.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/animations.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* ===========================
+   SPONSOR GRID
+=========================== */
+.sponsor-grid {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.sponsor-card {
+    background: #222;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #f3d88c;
+    text-align: center;
+}
+
+.sponsor-card h3 {
+    color: #f3d88c;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.sponsor-card.highlight {
+    background: #333;
+    border-color: #ffe7a3;
+}
+
+/* ===========================
+   VOLUNTEER GRID
+=========================== */
+.volunteer-grid {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.volunteer-card {
+    background: #222;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #f3d88c;
+}
+
+.volunteer-card h3 {
+    color: #f3d88c;
+    margin-bottom: 10px;
+}
+
+.program-btn {
+    display: inline-block;
+    margin-top: 12px;
+    background: #f3d88c;
+    color: #000;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.program-btn:hover {
+    background: #ffe7a3;
+}
+
+/* ===========================
+   DONATION LIST
+=========================== */
+.donation-list {
+    margin: 20px auto;
+    max-width: 700px;
+    list-style: none;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* ===========================
+   CTA BLOCK
+=========================== */
+.cta-block {
+    margin-top: 50px;
+    padding: 50px 20px;
+    text-align: center;
+    background: #0e0e0e;
+    border-top: 3px solid #f3d88c;
+    border-bottom: 3px solid #f3d88c;
+}
+
+.cta-block h2 {
+    color: #f3d88c;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.cta-block p {
+    margin-bottom: 20px;
+}

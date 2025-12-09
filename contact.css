@@ -1,0 +1,74 @@
+/* ===========================
+   CONTACT PAGE LAYOUT
+=========================== */
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin-top: 25px;
+}
+
+.contact-form, .contact-info {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #f3d88c;
+}
+
+.contact-form h2,
+.contact-info h2 {
+    color: #f3d88c;
+    margin-bottom: 15px;
+}
+
+/* FORM FIELDS */
+.contact-form label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f3d88c;
+    outline: none;
+}
+
+/* CONTACT INFO */
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: #f3d88c;
+    text-decoration: none;
+}
+
+/* MAP */
+.map-container {
+    margin-top: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
