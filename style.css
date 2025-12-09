@@ -56,4 +56,242 @@ nav a {
     color: #f4f4f4;
     text-decoration: none;
     font-weight: 500;
-    transition: 0.3s eas
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #f3d88c;
+    text-shadow: 0 0 8px #f3d88c;
+}
+
+/* ============================================================
+   HERO SECTION
+============================================================ */
+.hero, .page-hero {
+    background: url('images/hero.jpg') center/cover no-repeat;
+    padding: 140px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after, .page-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero h1, .page-hero h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    position: relative;
+    color: #fff;
+    z-index: 2;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    animation: slideDown 0.9s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideDown {
+    to { opacity: 1; transform: translateY(0); }
+    from { transform: translateY(-20px); }
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    background: #f3d88c;
+    color: #000;
+    padding: 14px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.btn:hover {
+    background: #ffe9b0;
+    transform: translateY(-2px);
+}
+
+/* ============================================================
+   SECTION STYLING
+============================================================ */
+.section {
+    padding: 70px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #f3d88c;
+}
+
+.section p {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+    font-size: 1.15rem;
+    opacity: 0.9;
+}
+
+/* ============================================================
+   PROGRAM GRID
+============================================================ */
+.program-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.program-card {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #f3d88c;
+    transition: 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 18px rgba(243,216,140,0.25);
+}
+
+.program-card h3 {
+    color: #f3d88c;
+    margin-bottom: 12px;
+}
+
+/* ============================================================
+   CAROUSEL (HOME PAGE)
+============================================================ */
+.carousel-container {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* All media */
+.slide img,
+.slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* FIX: No more zoomed-in cropping */
+    background: #000;
+}
+
+/* Navigation buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.55);
+    color: #f3d88c;
+    border: none;
+    padding: 12px 18px;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.85);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ============================================================
+   GALLERY GRID
+============================================================ */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(243,216,140,0.25);
+}
+
+/* ============================================================
+   CONTACT BOX
+============================================================ */
+.contact-box {
+    margin-top: 25px;
+    padding: 25px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    text-align: center;
+    border-left: 4px solid #f3d88c;
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+footer {
+    text-align: center;
+    padding: 22px;
+    background: #000;
+    color: #bbb;
+    margin-top: 40px;
+    border-top: 2px solid #f3d88c;
+}
+
+/* ============================================================
+   MOBILE RESPONSIVE
+============================================================ */
+@media (max-width: 768px) {
+
+    .hero h1,
+    .page-hero h1 {
+        font-size: 1.9rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .slide {
+        aspect-ratio: 4 / 5;
+    }
+
+    .carousel-btn {
+        font-size: 22px;
+        padding: 8px 12px;
+    }
+}
