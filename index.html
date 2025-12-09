@@ -9,6 +9,7 @@
 
 <body>
 
+<!-- HEADER -->
 <header>
     <div class="logo">KV Academy</div>
     <nav>
@@ -21,11 +22,13 @@
     </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
     <h1>Empowering Youth Through Purpose, Skill-Building & Community.</h1>
     <a class="btn" href="getinvolved.html">Get Involved</a>
 </section>
 
+<!-- WHY SECTION -->
 <section class="section">
     <h2>Why KV Academy?</h2>
     <p>
@@ -34,10 +37,12 @@
     </p>
 </section>
 
+<!-- PROGRAMS -->
 <section class="section">
     <h2>Our Programs</h2>
 
     <div class="program-grid">
+
         <div class="program-card">
             <h3>Lawn Care Entrepreneurship</h3>
             <p>Youth-led business training through service work, budgeting, teamwork, and responsibility.</p>
@@ -52,6 +57,16 @@
             <h3>Leadership & Literacy</h3>
             <p>Confidence, communication, financial literacy, and real-world decision-making.</p>
         </div>
+
+        <div class="program-card">
+            <h3>Tech & Coding Lab</h3>
+            <p>
+                Students learn real-world digital skills: HTML/CSS website building, coding basics, 
+                AI tools, workflow automation, and online entrepreneurship — preparing them for the 
+                future tech economy.
+            </p>
+        </div>
+
     </div>
 
     <div class="center">
@@ -59,23 +74,40 @@
     </div>
 </section>
 
+<!-- DIGITAL SKILLS HIGHLIGHT SECTION -->
+<section class="section highlight">
+    <h2>Digital Skills for the Next Generation</h2>
+    <p>
+        KV Academy teaches future-ready skills that help students thrive in technology, careers, 
+        entrepreneurship, and digital creation.
+    </p>
+
+    <ul class="highlight-list">
+        <li>✔ Website building & design (HTML/CSS)</li>
+        <li>✔ Coding fundamentals (JavaScript & Python)</li>
+        <li>✔ AI tools, automation & digital productivity</li>
+        <li>✔ Trading dashboards & data literacy</li>
+        <li>✔ Digital entrepreneurship projects</li>
+    </ul>
+
+    <p class="highlight-note">
+        Students leave with real projects, real confidence, and real skills they can use beyond school.
+    </p>
+</section>
+
+<!-- MINI CAROUSEL -->
 <section class="section" id="gallery">
     <h2>See Our Work in Action</h2>
 
     <div class="carousel-container">
         <div class="carousel-track">
 
-            <!-- Images -->
+            <!-- IMAGES -->
             <div class="slide"><img src="images/photo_2025-12-09_11-30-31.jpg" alt=""></div>
-            <div class="slide"><img src="images/photo_2025-12-09_11-20-59.jpg" alt=""></div>
-            <div class="slide"><img src="images/photo_2025-12-09_11-28-48.jpg" alt=""></div>
-			<div class="slide"><img src="images/photo_2025-12-09_11-30-25.jpg" alt=""></div>
-			<div class="slide"><img src="images/photo_2025-12-09_11-51-14.jpg" alt=""></div>
-			<div class="slide"><img src="images/photo_2025-12-09_12-17-42.jpg" alt=""></div>
-			<div class="slide"><img src="images/photo_2025-12-09_12-17-47.jpg" alt=""></div>
-			<div class="slide"><img src="images/photo_2025-12-09_11-21-17.jpg" alt=""></div>
+            <div class="slide"><img src="images/photo_2025-12-09_11-30-25.jpg" alt=""></div>
+            <div class="slide"><img src="images/photo_2025-12-09_11-50-52.jpg" alt=""></div>
 
-            <!-- Video -->
+            <!-- VIDEO -->
             <div class="slide">
                 <video autoplay muted loop playsinline>
                     <source src="videos/IMG_9959.mp4" type="video/mp4">
@@ -93,29 +125,25 @@
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p>© 2024 KV Academy — Empowering the Next Generation.</p>
 </footer>
 
-<!-- ========================================================= -->
-<!-- WORKING HOME PAGE CAROUSEL SCRIPT - PLACE JUST ABOVE </body> -->
-<!-- ========================================================= -->
-
+<!-- ================================
+     HOME PAGE CAROUSEL SCRIPT
+================================ -->
 <script>
-// HOME PAGE MINI-CAROUSEL CONTROLLER
-
 let index = 0;
 const track = document.querySelector(".carousel-track");
 const slides = document.querySelectorAll(".carousel-track .slide");
 const totalSlides = slides.length;
 
-// Move the carousel
 function showSlide(i) {
     index = (i + totalSlides) % totalSlides;
     track.style.transform = `translateX(-${index * 100}%)`;
 }
 
-// Button controls
 document.querySelector(".next").addEventListener("click", () => {
     showSlide(index + 1);
 });
@@ -124,7 +152,6 @@ document.querySelector(".prev").addEventListener("click", () => {
     showSlide(index - 1);
 });
 
-// Autoplay every 5 seconds
 setInterval(() => {
     showSlide(index + 1);
 }, 5000);
