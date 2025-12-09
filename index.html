@@ -62,15 +62,45 @@
         </div>
     </section>
 
-    <!-- GALLERY -->
+    <!-- GALLERY CAROUSEL (UPDATED) -->
     <section id="gallery" class="section">
         <h2>See Our Work in Action</h2>
 
-        <div class="gallery-grid">
-            <img src="IMAGE1.jpg" alt="Program Image">
-            <img src="IMAGE2.jpg" alt="Program Image">
-            <img src="IMAGE3.jpg" alt="Program Image">
-            <img src="IMAGE4.jpg" alt="Program Image">
+        <div class="carousel-container">
+            <div class="carousel-track">
+
+                <!-- ***** ADD YOUR 12–20 IMAGES ***** -->
+                <div class="slide"><img loading="lazy" src="images/photo_2025-12-09_11-30-31" alt=""></div>
+                <div class="slide"><img loading="lazy" src="images/photo_2025-12-09_11-30-25" alt=""></div>
+                <div class="slide"><img loading="lazy" src="images/photo_2025-12-09_11-50-52" alt=""></div>
+                <div class="slide"><img loading="lazy" src="images/photo_2025-12-09_11-51-14" alt=""></div>
+                <div class="slide"><img loading="lazy" src="images/photo_2025-12-09_12-17-42" alt=""></div>
+                <div class="slide"><img loading="lazy" src="images/photo_2025-12-09_12-17-47" alt=""></div>
+                <div class="slide"><img loading="lazy" src="images/photo_2025-12-09_12-17-35" alt=""></div>
+                <div class="slide"><img loading="lazy" src="images/photo_2025-12-09_11-28-48" alt=""></div>
+                <div class="slide"><img loading="lazy" src="images/photo_2025-12-09_11-20-59" alt=""></div>
+                <div class="slide"><img loading="lazy" src="images/photo_2025-12-09_11-28-36" alt=""></div>
+                <div class="slide"><img loading="lazy" src="images/photo_2025-12-09_12-17-52" alt=""></div>
+                <div class="slide"><img loading="lazy" src="images/photo_2025-12-09_11-21-17" alt=""></div>
+
+                <!-- ***** VIDEOS (OPTIONAL) ***** -->
+                <div class="slide">
+                    <video loading="lazy" src="videos/IMG_9959" autoplay muted loop></video>
+                </div>
+
+                <div class="slide">
+                    <video loading="lazy" src="videos/video_2025-12-09_11-30-36" autoplay muted loop></video>
+                </div>
+
+                <div class="slide">
+                    <video loading="lazy" src="videos/IMG_9941" autoplay muted loop></video>
+                </div>
+
+            </div>
+
+            <!-- NAV BUTTONS -->
+            <button class="carousel-btn prev">❮</button>
+            <button class="carousel-btn next">❯</button>
         </div>
     </section>
 
@@ -89,6 +119,33 @@
         <p>© 2024 KV Academy — Empowering the Next Generation.</p>
         <p>info@kvacademy.org</p>
     </footer>
+
+
+    <!-- CAROUSEL JAVASCRIPT -->
+    <script>
+        let index = 0;
+        const track = document.querySelector('.carousel-track');
+        const slides = document.querySelectorAll('.slide');
+        const total = slides.length;
+
+        function showSlide(i) {
+            index = (i + total) % total;
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        document.querySelector('.next').addEventListener('click', () => {
+            showSlide(index + 1);
+        });
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            showSlide(index - 1);
+        });
+
+        // AUTO ROTATE EVERY 5 SECONDS
+        setInterval(() => {
+            showSlide(index + 1);
+        }, 5000);
+    </script>
 
 </body>
 </html>
