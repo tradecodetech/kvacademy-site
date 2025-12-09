@@ -1,23 +1,147 @@
-/* Section Title */
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #f3d88c; /* gold */
-    margin: 40px 0 20px;
+/* ================================
+   GLOBAL RESET & BASE STYLES
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* MAIN CAROUSEL WRAPPER */
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* ================================
+   HEADER
+================================ */
+header {
+    background: #000;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f3d88c;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #f3d88c;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #f3d88c;
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+.hero {
+    background: url('images/hero.jpg') center/cover no-repeat;
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    max-width: 800px;
+    margin: auto;
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #f3d88c;
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #ffe7a3;
+}
+
+/* ================================
+   SECTIONS
+================================ */
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #f3d88c;
+}
+
+.section p {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ================================
+   PROGRAM GRID
+================================ */
+.program-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.program-card {
+    background: #222;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #f3d88c;
+}
+
+.program-card h3 {
+    color: #f3d88c;
+    margin-bottom: 10px;
+}
+
+/* ================================
+   GALLERY TITLE
+================================ */
+#gallery h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #f3d88c;
+    margin-bottom: 25px;
+}
+
+/* ================================
+   CAROUSEL WRAPPER
+================================ */
 .carousel-container {
     position: relative;
     max-width: 900px;
-    margin: 40px auto;
+    margin: 0 auto 40px auto;
     overflow: hidden;
-    border-radius: 16px;
-    background: #000;
+    border-radius: 12px;
+    background: transparent;
 }
 
-/* TRACK */
+/* TRACK THAT MOVES LEFT/RIGHT */
 .carousel-track {
     display: flex;
     transition: transform 0.6s ease-in-out;
@@ -26,125 +150,97 @@
 /* SINGLE SLIDE */
 .slide {
     min-width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-/* IMAGE */
+/* IMAGES */
 .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 16px;
+    border-radius: 12px;
 }
 
-/* VIDEO */
+/* VIDEOS */
 .slide video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 16px;
+    border-radius: 12px;
 }
 
-/* BUTTONS */
+/* ================================
+   CAROUSEL BUTTONS
+================================ */
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.5);
     color: #f3d88c;
     border: none;
-    padding: 10px 14px;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 8px;
-    z-index: 10;
-}
-
-.carousel-btn.prev { left: 16px; }
-.carousel-btn.next { right: 16px; }
-
-
-/* Mobile */
-@media (max-width: 768px) {
-    .slide img {
-        max-height: 300px;
-    }
-}
-/* GALLERY TITLE (optional, you already have section styles) */
-#gallery h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-/* MAIN CAROUSEL WRAPPER */
-.carousel-container {
-    position: relative;
-    max-width: 900px;
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 16px;
-    background: #000;
-}
-
-/* TRACK THAT SLIDES LEFT/RIGHT */
-.carousel-track {
-    display: flex;
-    transition: transform 0.6s ease-in-out;
-}
-
-/* EACH SLIDE (ONE VISIBLE AT A TIME) */
-.slide {
-    min-width: 100%;
-    aspect-ratio: 16 / 9;   /* keeps them big and cinematic */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* IMAGES INSIDE SLIDES */
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;      /* yes, a little crop, but nice & full */
-    border-radius: 16px;
-}
-
-/* NAV BUTTONS */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.6);
-    color: #f3d88c;
-    border: none;
-    padding: 10px 14px;
-    font-size: 24px;
+    padding: 12px 18px;
+    font-size: 26px;
     cursor: pointer;
     border-radius: 8px;
     z-index: 10;
     transition: background 0.3s ease;
 }
 
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
+
 .carousel-btn:hover {
-    background: rgba(0,0,0,0.85);
+    background: rgba(0, 0, 0, 0.8);
 }
 
-.carousel-btn.prev { left: 16px; }
-.carousel-btn.next { right: 16px; }
+/* ================================
+   GET INVOLVED
+================================ */
+#involved p {
+    margin-bottom: 20px;
+}
 
+/* ================================
+   FOOTER
+================================ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #bbb;
+    margin-top: 40px;
+    border-top: 2px solid #f3d88c;
+}
+
+/* ================================
+   MOBILE OPTIMIZATION
+================================ */
 @media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
     .carousel-container {
         max-width: 100%;
         border-radius: 0;
     }
+
     .slide {
-        aspect-ratio: 4 / 5; /* fits phone better */
+        aspect-ratio: 4 / 5;
     }
-    .slide img {
+
+    .slide img,
+    .slide video {
         border-radius: 0;
+    }
+
+    .carousel-btn {
+        font-size: 20px;
+        padding: 8px 12px;
     }
 }
