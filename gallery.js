@@ -1,44 +1,29 @@
+// ============================
+// MINI CAROUSEL FOR HOMEPAGE
+// ============================
+
 document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".carousel-track");
+    const slides = document.querySelectorAll(".carousel-track .slide");
+    const nextBtn = document.querySelector(".next");
+    const prevBtn = document.querySelector(".prev");
 
-    // Select all gallery items (images + videos)
-    const items = document.querySelectorAll(".gallery-grid img, .gallery-grid video");
+    // If this page does NOT have a carousel, stop
+    if (!track || slides.length === 0) return;
 
-    // Create lightbox container
-    const lightbox = document.createElement("div");
-    lightbox.className = "lightbox";
-    lightbox.style.display = "none";
-    document.body.appendChild(lightbox);
+    let index = 0;
+    const total = slides.length;
 
-    // Close lightbox when clicking anywhere
-    lightbox.addEventListener("click", () => {
-        lightbox.style.display = "none";
-        lightbox.innerHTML = "";
-    });
+    function showSlide(i) {
+        index = (i + total) % total;
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
 
-    // Add click-to-open behavior for each gallery item
-    items.forEach(item => {
-        item.addEventListener("click", () => {
-            let clone;
+    nextBtn.addEventListener("click", () => showSlide(index + 1));
+    prevBtn.addEventListener("click", () => showSlide(index - 1));
 
-            if (item.tagName === "VIDEO") {
-                clone = item.cloneNode(true);
-                clone.controls = true;
-                clone.autoplay = true;
-                clone.loop = true;
-            } else {
-                clone = document.createElement("img");
-                clone.src = item.src;
-            }
-
-            // Clear old media
-            lightbox.innerHTML = "";
-
-            // Add clicked media to lightbox
-            lightbox.appendChild(clone);
-
-            // Show lightbox
-            lightbox.style.display = "flex";
-        });
-    });
-
+    // OPTIONAL AUTOSCROLL
+    setInterval(() => {
+        showSlide(index + 1);
+    }, 5000);
 });
