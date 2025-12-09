@@ -1,286 +1,59 @@
-/* =========================================
-   RESET + BASE
-========================================= */
+/* ============================================================
+   GLOBAL RESET + BASE THEME
+============================================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
-    background: #0b0b0b;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0d0d0d;
     color: #f4f4f4;
+    line-height: 1.7;
     overflow-x: hidden;
-    line-height: 1.6;
 }
 
-/* Smooth fade on load */
-.fade-in {
+/* Soft fade-in animation for all sections */
+section {
+    animation: fadeIn 0.8s ease forwards;
     opacity: 0;
-    transform: translateY(15px);
-    transition: all 0.7s ease;
-}
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
-/* =========================================
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* ============================================================
    HEADER
-========================================= */
+============================================================ */
 header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.88);
-    border-bottom: 2px solid #f3d88c;
-    padding: 15px 30px;
+    background: #000;
+    padding: 18px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid #f3d88c;
+    position: sticky;
+    top: 0;
     z-index: 999;
-    backdrop-filter: blur(4px);
 }
 
 .logo {
-    font-size: 1.7rem;
-    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: 700;
     color: #f3d88c;
-}
-
-nav {
-    display: flex;
-    gap: 25px;
+    letter-spacing: 1px;
 }
 
 nav a {
+    margin-left: 22px;
     color: #f4f4f4;
     text-decoration: none;
-    font-size: 1rem;
     font-weight: 500;
-}
-nav a:hover {
-    color: #f3d88c;
-}
-
-/* MOBILE MENU */
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-}
-.mobile-menu div {
-    width: 25px;
-    height: 3px;
-    background: #f4f4f4;
-}
-
-/* Hidden mobile nav */
-.mobile-nav {
-    display: none;
-}
-
-/* =========================================
-   HERO SECTION
-========================================= */
-.hero {
-    padding: 180px 20px 140px;
-    text-align: center;
-    background: url('../images/hero/hero1.jpg') center/cover no-repeat;
-}
-
-.hero-overlay {
-    background: rgba(0,0,0,0.45);
-    padding: 40px;
-    border-radius: 12px;
-    display: inline-block;
-}
-
-.hero h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 18px;
-    text-shadow: 0 0 12px rgba(0,0,0,0.7);
-}
-
-.hero p {
-    max-width: 700px;
-    margin: auto;
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    background: #f3d88c;
-    color: #000;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
-.btn:hover {
-    background: #ffe7a3;
-}
-
-/* =========================================
-   SECTION BASE
-========================================= */
-.section {
-    padding: 80px 20px;
-    max-width: 1100px;
-    margin: auto;
-}
-.section h2 {
-    text-align: center;
-    color: #f3d88c;
-    font-size: 2.2rem;
-    margin-bottom: 25px;
-}
-
-/* =========================================
-   PROGRAM GRID
-========================================= */
-.program-grid {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
-
-.program-card {
-    background: #161616;
-    padding: 25px;
-    border-radius: 12px;
-    border-left: 4px solid #f3d88c;
-    transition: transform 0.25s ease;
-}
-.program-card:hover {
-    transform: translateY(-6px);
-}
-.program-card h3 {
-    color: #f3d88c;
-    margin-bottom: 12px;
-}
-
-/* =========================================
-   CAROUSEL (IMAGES + VIDEO)
-========================================= */
-.carousel-container {
-    position: relative;
-    max-width: 900px;
-    margin: 0 auto 60px;
-    overflow: hidden;
-    border-radius: 12px;
-    background: transparent;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.6s ease-in-out;
-}
-
-.slide {
-    min-width: 100%;
-    height: 420px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #000;
-}
-
-.slide img,
-.slide video {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 12px;
-}
-
-/* Buttons */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.55);
-    color: #f3d88c;
-    border: none;
-    padding: 12px 18px;
-    font-size: 26px;
-    cursor: pointer;
-    border-radius: 8px;
-    z-index: 10;
-    transition: 0.3s ease;
-}
-.carousel-btn:hover {
-    background: rgba(0,0,0,0.85);
-}
-.carousel-btn.prev { left: 15px; }
-.carousel-btn.next { right: 15px; }
-
-/* =========================================
-   FOOTER
-========================================= */
-footer {
-    background: #000;
-    text-align: center;
-    padding: 25px;
-    border-top: 2px solid #f3d88c;
-    color: #bbb;
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-@media (max-width: 768px) {
-
-    nav {
-        display: none;
-    }
-    .mobile-menu {
-        display: flex;
-    }
-
-    .mobile-nav {
-        display: none;
-        background: #000;
-        flex-direction: column;
-        padding: 20px;
-        border-bottom: 2px solid #f3d88c;
-    }
-    .mobile-nav a {
-        padding: 12px 0;
-        color: #fff;
-        text-decoration: none;
-        border-bottom: 1px solid #222;
-    }
-
-    .slide {
-        height: 360px;
-    }
-}
-.gallery-grid-container {
-    max-width: 1100px;
-    margin: auto;
-}
-
-.gallery-grid {
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.gallery-grid img,
-.gallery-grid video {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-}
+    transition: 0.3s eas
