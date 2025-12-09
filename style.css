@@ -1,6 +1,6 @@
-/* ================================
-   GLOBAL RESET & BASE STYLES
-================================ */
+/* =========================================
+   RESET + BASE
+========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -8,175 +8,209 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #111;
+    font-family: 'Inter', sans-serif;
+    background: #0b0b0b;
     color: #f4f4f4;
+    overflow-x: hidden;
     line-height: 1.6;
 }
 
-/* ================================
+/* Smooth fade on load */
+.fade-in {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.7s ease;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
    HEADER
-================================ */
+========================================= */
 header {
-    background: #000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.88);
+    border-bottom: 2px solid #f3d88c;
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #f3d88c;
+    z-index: 999;
+    backdrop-filter: blur(4px);
 }
 
 .logo {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: bold;
     color: #f3d88c;
 }
 
-nav a {
-    margin-left: 20px;
-    color: #f4f4f4;
-    text-decoration: none;
-    font-weight: 500;
+nav {
+    display: flex;
+    gap: 25px;
 }
 
+nav a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
 nav a:hover {
     color: #f3d88c;
 }
 
-/* ================================
+/* MOBILE MENU */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+.mobile-menu div {
+    width: 25px;
+    height: 3px;
+    background: #f4f4f4;
+}
+
+/* Hidden mobile nav */
+.mobile-nav {
+    display: none;
+}
+
+/* =========================================
    HERO SECTION
-================================ */
+========================================= */
 .hero {
-    background: url('images/hero.jpg') center/cover no-repeat;
-    padding: 120px 20px;
+    padding: 180px 20px 140px;
     text-align: center;
+    background: url('../images/hero/hero1.jpg') center/cover no-repeat;
+}
+
+.hero-overlay {
+    background: rgba(0,0,0,0.45);
+    padding: 40px;
+    border-radius: 12px;
+    display: inline-block;
 }
 
 .hero h1 {
-    font-size: 2.4rem;
-    max-width: 800px;
-    margin: auto;
+    font-size: 2.8rem;
+    font-weight: 700;
     color: #fff;
+    margin-bottom: 18px;
+    text-shadow: 0 0 12px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.2rem;
+    opacity: 0.9;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 25px;
     background: #f3d88c;
     color: #000;
     padding: 12px 25px;
-    border-radius: 6px;
-    text-decoration: none;
+    border-radius: 8px;
     font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
-
 .btn:hover {
     background: #ffe7a3;
 }
 
-/* ================================
-   SECTION GLOBALS
-================================ */
+/* =========================================
+   SECTION BASE
+========================================= */
 .section {
-    padding: 60px 20px;
-    max-width: 1000px;
+    padding: 80px 20px;
+    max-width: 1100px;
     margin: auto;
 }
-
 .section h2 {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 25px;
     color: #f3d88c;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
 }
 
-.section p {
-    text-align: center;
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: auto;
-}
-
-/* ================================
+/* =========================================
    PROGRAM GRID
-================================ */
+========================================= */
 .program-grid {
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    gap: 30px;
 }
 
 .program-card {
-    background: #222;
+    background: #161616;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 12px;
     border-left: 4px solid #f3d88c;
+    transition: transform 0.25s ease;
 }
-
+.program-card:hover {
+    transform: translateY(-6px);
+}
 .program-card h3 {
     color: #f3d88c;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
-/* ================================
-   GALLERY TITLE
-================================ */
-#gallery h2 {
-    text-align: center;
-    font-size: 32px;
-    color: #f3d88c;
-    margin-bottom: 25px;
-}
-
-/* ================================
-   CAROUSEL WRAPPER
-================================ */
+/* =========================================
+   CAROUSEL (IMAGES + VIDEO)
+========================================= */
 .carousel-container {
     position: relative;
     max-width: 900px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 60px;
     overflow: hidden;
     border-radius: 12px;
     background: transparent;
 }
 
-/* TRACK THAT MOVES LEFT/RIGHT */
 .carousel-track {
     display: flex;
     transition: transform 0.6s ease-in-out;
 }
 
-/* SINGLE SLIDE */
 .slide {
     min-width: 100%;
-    height: 420px; /* fixed height prevents zoom */
+    height: 420px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     background: #000;
 }
 
-/* IMAGES + VIDEOS (NO ZOOM) */
 .slide img,
 .slide video {
     max-width: 100%;
     max-height: 100%;
     width: auto;
     height: auto;
-    object-fit: contain;   /* no crop */
+    object-fit: contain;
     border-radius: 12px;
-    background: #000;
 }
 
-/* ================================
-   CAROUSEL BUTTONS
-================================ */
+/* Buttons */
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0,0,0,0.55);
     color: #f3d88c;
     border: none;
     padding: 12px 18px;
@@ -184,60 +218,52 @@ nav a:hover {
     cursor: pointer;
     border-radius: 8px;
     z-index: 10;
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
 }
-
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.85);
+}
 .carousel-btn.prev { left: 15px; }
 .carousel-btn.next { right: 15px; }
 
-.carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-/* ================================
-   GET INVOLVED
-================================ */
-#involved p {
-    margin-bottom: 20px;
-}
-
-/* ================================
+/* =========================================
    FOOTER
-================================ */
+========================================= */
 footer {
-    text-align: center;
-    padding: 20px;
     background: #000;
-    color: #bbb;
-    margin-top: 40px;
+    text-align: center;
+    padding: 25px;
     border-top: 2px solid #f3d88c;
+    color: #bbb;
 }
 
-/* ================================
-   MOBILE OPTIMIZATION
-================================ */
+/* =========================================
+   MOBILE
+========================================= */
 @media (max-width: 768px) {
 
-    .hero h1 {
-        font-size: 1.8rem;
+    nav {
+        display: none;
+    }
+    .mobile-menu {
+        display: flex;
     }
 
-    .carousel-container {
-        max-width: 100%;
-        border-radius: 0;
+    .mobile-nav {
+        display: none;
+        background: #000;
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 2px solid #f3d88c;
+    }
+    .mobile-nav a {
+        padding: 12px 0;
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 1px solid #222;
     }
 
     .slide {
         height: 360px;
-    }
-
-    .slide img,
-    .slide video {
-        border-radius: 0;
-    }
-
-    .carousel-btn {
-        font-size: 20px;
-        padding: 8px 12px;
     }
 }
