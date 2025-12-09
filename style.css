@@ -74,13 +74,15 @@ nav a {
 }
 
 /* CAROUSEL */
-.carousel-container {
-    position: relative;
-    max-width: 900px;
-    margin: 40px auto;
-    overflow: hidden;
-    border-radius: 12px;
-    background: #000;
+.carousel-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    max-height: 500px; /* keeps images same height without cropping */
+}
+
 }
 
 .carousel-track {
