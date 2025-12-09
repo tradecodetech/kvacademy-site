@@ -65,17 +65,18 @@
     <div class="carousel-container">
         <div class="carousel-track">
 
-            <!-- Sample images -->
+            <!-- Images -->
             <div class="slide"><img src="images/photo_2025-12-09_11-30-31.jpg" alt=""></div>
             <div class="slide"><img src="images/photo_2025-12-09_11-30-25.jpg" alt=""></div>
             <div class="slide"><img src="images/photo_2025-12-09_11-50-52.jpg" alt=""></div>
 
-            <!-- Videos -->
+            <!-- Video -->
             <div class="slide">
                 <video autoplay muted loop playsinline>
                     <source src="videos/IMG_9959.mp4" type="video/mp4">
                 </video>
             </div>
+
         </div>
 
         <button class="carousel-btn prev">❮</button>
@@ -91,7 +92,38 @@
     <p>© 2024 KV Academy — Empowering the Next Generation.</p>
 </footer>
 
-<script src="gallery.js"></script>
+<!-- ========================================================= -->
+<!-- WORKING HOME PAGE CAROUSEL SCRIPT - PLACE JUST ABOVE </body> -->
+<!-- ========================================================= -->
+
+<script>
+// HOME PAGE MINI-CAROUSEL CONTROLLER
+
+let index = 0;
+const track = document.querySelector(".carousel-track");
+const slides = document.querySelectorAll(".carousel-track .slide");
+const totalSlides = slides.length;
+
+// Move the carousel
+function showSlide(i) {
+    index = (i + totalSlides) % totalSlides;
+    track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// Button controls
+document.querySelector(".next").addEventListener("click", () => {
+    showSlide(index + 1);
+});
+
+document.querySelector(".prev").addEventListener("click", () => {
+    showSlide(index - 1);
+});
+
+// Autoplay every 5 seconds
+setInterval(() => {
+    showSlide(index + 1);
+}, 5000);
+</script>
 
 </body>
 </html>
