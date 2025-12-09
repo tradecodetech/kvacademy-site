@@ -1,36 +1,94 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KV Academy</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="programs.html">Programs</a>
-    <a href="getinvolved.html">Get Involved</a>
-</nav>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">KV Academy</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#programs">Programs</a>
+            <a href="#involved">Get Involved</a>
+        </nav>
+    </header>
 
-<section>
-    <h1>Welcome to KV Academy</h1>
-    <p>Empowering youth through purpose, skill-building, and community.</p>
-    <button onclick="location.href='getinvolved.html'">Get Involved</button>
-</section>
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <h1>Empowering youth through purpose, skill-building, and community.</h1>
+        <a href="#involved" class="btn">Get Involved</a>
+    </section>
 
-<section style="text-align:center;">
-    <h2 style="animation: fadeInUp 1.5s;">Why KV Academy?</h2>
-    <p style="animation: fadeIn 2s;">We inspire growth, resilience, and leadership through real-world experience and mentorship.</p>
-</section>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <h2>Why KV Academy?</h2>
+        <p>
+            KV Academy inspires growth, resilience, and leadership through real-world 
+            experience, mentorship, and project-based learning. Our goal is to help 
+            youth build confidence, financial literacy, and a strong foundation for 
+            adulthood and entrepreneurship.
+        </p>
+    </section>
 
-<section>
-    <h2>Gallery</h2>
-    <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
-        <img src="https://via.placeholder.com/200x150?text=Youth+Teaching" style="width:200px; height:150px; object-fit:cover; animation: fadeIn 1s;">
-        <img src="https://via.placeholder.com/200x150?text=Lawn+Care+Project" style="width:200px; height:150px; object-fit:cover; animation: fadeIn 1.5s;">
-        <img src="https://via.placeholder.com/200x150?text=Trading+Bootcamp" style="width:200px; height:150px; object-fit:cover; animation: fadeIn 2s;">
-    </div>
-</section>
+    <!-- PROGRAMS -->
+    <section id="programs" class="section">
+        <h2>Our Programs</h2>
+
+        <div class="program-grid">
+            <div class="program-card">
+                <h3>Lawn Care Entrepreneurship</h3>
+                <p>Teaching youth business fundamentals through real service work, 
+                teamwork, and financial discipline.</p>
+            </div>
+
+            <div class="program-card">
+                <h3>Digital Trading Lab</h3>
+                <p>Hands-on market education, risk management, macro awareness, and 
+                digital skill-building.</p>
+            </div>
+
+            <div class="program-card">
+                <h3>Leadership & Literacy</h3>
+                <p>Developing confidence, public speaking, financial literacy, and 
+                real-world decision-making skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+        <h2>See Our Work in Action</h2>
+
+        <div class="gallery-grid">
+            <img src="IMAGE1.jpg" alt="Program Image">
+            <img src="IMAGE2.jpg" alt="Program Image">
+            <img src="IMAGE3.jpg" alt="Program Image">
+            <img src="IMAGE4.jpg" alt="Program Image">
+        </div>
+    </section>
+
+    <!-- GET INVOLVED -->
+    <section id="involved" class="section">
+        <h2>Get Involved</h2>
+        <p>
+            Whether you're a parent, volunteer, business owner, or supporter,
+            KV Academy welcomes you to help build the next generation of leaders.
+        </p>
+        <a href="mailto:info@kvacademy.org" class="btn">Contact Us</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2024 KV Academy — Empowering the Next Generation.</p>
+        <p>info@kvacademy.org</p>
+    </footer>
+
 </body>
 </html>
