@@ -86,13 +86,18 @@ nav a:hover {
 
 /* SECTIONS */
 .section {
-    padding: 80px 40px;
+    padding: 100px 40px;
     text-align: center;
+    background: #0d0d0d;
+}
+
+.hero + .section {
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
 }
 
 .section h2 {
     font-size: 32px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     color: #ffd65a;
 }
 
