@@ -1,4 +1,15 @@
-/* GLOBAL */
+/* =========================
+   BRAND COLOR SYSTEM
+   ========================= */
+:root {
+    --gold-primary: #d4af37;   /* Logo, buttons, primary accents */
+    --gold-bright:  #ffd65a;   /* Section headers, highlights */
+    --gold-soft:    #f3d88c;   /* Subtle dividers, page accents */
+}
+
+/* =========================
+   GLOBAL
+   ========================= */
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +24,13 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+   ========================= */
 header {
     width: 100%;
     background: #000;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 2px solid var(--gold-primary);
     padding: 18px 40px;
     display: flex;
     justify-content: space-between;
@@ -30,7 +43,7 @@ header {
 .logo {
     font-size: 26px;
     font-weight: bold;
-    color: #d4af37;
+    color: var(--gold-primary);
     letter-spacing: 1px;
 }
 
@@ -43,10 +56,12 @@ nav a {
 }
 
 nav a:hover {
-    color: #d4af37;
+    color: var(--gold-primary);
 }
 
-/* HERO SECTION */
+/* =========================
+   HERO SECTION
+   ========================= */
 .hero {
     text-align: center;
     padding: 120px 20px;
@@ -55,10 +70,8 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-	align-items: center;
+    align-items: center;
 }
-
-
 
 .hero h1 {
     font-size: 38px;
@@ -68,10 +81,12 @@ nav a:hover {
     line-height: 1.2;
 }
 
-
+/* =========================
+   BUTTONS
+   ========================= */
 .btn {
     display: inline-block;
-    background: #d4af37;
+    background: var(--gold-primary);
     padding: 14px 36px;
     color: #000;
     border-radius: 6px;
@@ -83,12 +98,13 @@ nav a:hover {
     width: auto;
 }
 
-
 .btn:hover {
-    background: #ffd65a;
+    background: var(--gold-bright);
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+   ========================= */
 .section {
     padding: 100px 40px;
     text-align: center;
@@ -96,16 +112,18 @@ nav a:hover {
 }
 
 .hero + .section {
-    border-top: 1px solid rgba(212, 175, 55, 0.25);
+    border-top: 1px solid var(--gold-soft);
 }
 
 .section h2 {
     font-size: 32px;
     margin-bottom: 25px;
-    color: #ffd65a;
+    color: var(--gold-bright);
 }
 
-/* PROGRAM GRID */
+/* =========================
+   PROGRAM GRID
+   ========================= */
 .program-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -124,16 +142,18 @@ nav a:hover {
 
 .program-card:hover {
     transform: translateY(-6px);
-    border-color: #d4af37;
+    border-color: var(--gold-primary);
 }
 
 .program-card h3 {
     margin-bottom: 10px;
     font-size: 20px;
-    color: #ffd65a;
+    color: var(--gold-bright);
 }
 
-/* CAROUSEL */
+/* =========================
+   CAROUSEL
+   ========================= */
 .carousel-container {
     position: relative;
     width: 92%;
@@ -157,12 +177,14 @@ nav a:hover {
     object-fit: cover;
 }
 
-/* CAROUSEL BUTTONS */
+/* =========================
+   CAROUSEL BUTTONS
+   ========================= */
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #d4af37;
+    background: var(--gold-primary);
     color: #000;
     font-size: 22px;
     border: none;
@@ -173,13 +195,15 @@ nav a:hover {
 }
 
 .carousel-btn:hover {
-    background: #ffd65a;
+    background: var(--gold-bright);
 }
 
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* FULL GALLERY GRID */
+/* =========================
+   FULL GALLERY GRID
+   ========================= */
 .gallery-grid {
     width: 92%;
     margin: auto;
@@ -198,10 +222,12 @@ nav a:hover {
 
 .gallery-grid img:hover {
     transform: scale(1.05);
-    border-color: #ffd65a;
+    border-color: var(--gold-bright);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+   ========================= */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -210,7 +236,10 @@ footer {
     font-size: 14px;
     color: #aaa;
 }
-/* Fade-in animation for premium cards */
+
+/* =========================
+   ANIMATIONS
+   ========================= */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -224,17 +253,19 @@ footer {
     }
 }
 
-/* Page hero section */
+/* =========================
+   PAGE HERO (INNER PAGES)
+   ========================= */
 .page-hero {
     text-align: center;
     padding: 80px 20px;
     background: #111;
-    border-bottom: 2px solid #f3d88c;
+    border-bottom: 2px solid var(--gold-soft);
 }
 
 .page-hero h1 {
     font-size: 2.5rem;
-    color: #f3d88c;
+    color: var(--gold-soft);
 }
 
 .page-hero p {
