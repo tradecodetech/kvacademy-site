@@ -274,3 +274,61 @@ footer {
     max-width: 650px;
     margin: 10px auto 0;
 }
+/* =========================
+   CONTACT SECTION UPGRADE
+   ========================= */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 100px 40px;
+    background: #0d0d0d;
+    border-top: 1px solid var(--gold-soft);
+}
+
+.contact-box {
+    flex: 1 1 320px;
+    max-width: 500px;
+    background: #1a1a1a;
+    border: 1px solid var(--gold-primary);
+    border-radius: 12px;
+    padding: 40px;
+    text-align: left;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+    transition: 0.3s ease;
+}
+
+.contact-box:hover {
+    border-color: var(--gold-bright);
+    transform: translateY(-5px);
+}
+
+.contact-box h3 {
+    color: var(--gold-bright);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.contact-box a {
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--gold-primary);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--gold-primary);
+    transition: 0.3s;
+}
+
+.contact-box a:hover {
+    color: var(--gold-bright);
+    border-color: var(--gold-bright);
+}
