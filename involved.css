@@ -126,10 +126,12 @@
 }
 
 .cta-block h2 {
-    color: #f3d88c;
-    margin-bottom: 10px;
-    font-size: 2rem;
+  color: #f3d88c;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  text-align: center; /* <-- Ensures centering */
 }
+
 
 .cta-block p {
     margin-bottom: 20px;
