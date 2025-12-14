@@ -1,11 +1,15 @@
-/* ========================= BRAND COLOR SYSTEM ========================= */
+/* =========================
+   BRAND COLOR SYSTEM
+   ========================= */
 :root {
     --gold-primary: #d4af37;   /* Logo, buttons, primary accents */
-    --gold-bright: #ffd65a;    /* Section headers, highlights */
-    --gold-soft: #f3d88c;      /* Subtle dividers, page accents */
+    --gold-bright:  #ffd65a;   /* Section headers, highlights */
+    --gold-soft:    #f3d88c;   /* Subtle dividers, page accents */
 }
 
-/* ========================= GLOBAL ========================= */
+/* =========================
+   GLOBAL
+   ========================= */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +24,9 @@ body {
     line-height: 1.6;
 }
 
-/* ========================= HEADER ========================= */
+/* =========================
+   HEADER
+   ========================= */
 header {
     width: 100%;
     background: #000;
@@ -53,7 +59,9 @@ nav a:hover {
     color: var(--gold-primary);
 }
 
-/* ========================= HERO SECTION ========================= */
+/* =========================
+   HERO SECTION
+   ========================= */
 .hero {
     text-align: center;
     padding: 120px 20px;
@@ -73,7 +81,9 @@ nav a:hover {
     line-height: 1.2;
 }
 
-/* ========================= BUTTONS ========================= */
+/* =========================
+   BUTTONS
+   ========================= */
 .btn {
     display: inline-block;
     background: var(--gold-primary);
@@ -92,7 +102,9 @@ nav a:hover {
     background: var(--gold-bright);
 }
 
-/* ========================= SECTIONS ========================= */
+/* =========================
+   SECTIONS
+   ========================= */
 .section {
     padding: 100px 40px;
     text-align: center;
@@ -109,7 +121,9 @@ nav a:hover {
     color: var(--gold-bright);
 }
 
-/* ========================= PROGRAM GRID ========================= */
+/* =========================
+   PROGRAM GRID
+   ========================= */
 .program-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -137,7 +151,9 @@ nav a:hover {
     color: var(--gold-bright);
 }
 
-/* ========================= CAROUSEL ========================= */
+/* =========================
+   CAROUSEL
+   ========================= */
 .carousel-container {
     position: relative;
     width: 92%;
@@ -161,7 +177,9 @@ nav a:hover {
     object-fit: cover;
 }
 
-/* ========================= CAROUSEL BUTTONS ========================= */
+/* =========================
+   CAROUSEL BUTTONS
+   ========================= */
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -180,15 +198,12 @@ nav a:hover {
     background: var(--gold-bright);
 }
 
-.prev {
-    left: 10px;
-}
+.prev { left: 10px; }
+.next { right: 10px; }
 
-.next {
-    right: 10px;
-}
-
-/* ========================= FULL GALLERY GRID ========================= */
+/* =========================
+   FULL GALLERY GRID
+   ========================= */
 .gallery-grid {
     width: 92%;
     margin: auto;
@@ -210,7 +225,9 @@ nav a:hover {
     border-color: var(--gold-bright);
 }
 
-/* ========================= FOOTER ========================= */
+/* =========================
+   FOOTER
+   ========================= */
 footer {
     text-align: center;
     padding: 40px 20px;
@@ -220,7 +237,9 @@ footer {
     color: #aaa;
 }
 
-/* ========================= ANIMATIONS ========================= */
+/* =========================
+   ANIMATIONS
+   ========================= */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -234,7 +253,9 @@ footer {
     }
 }
 
-/* ========================= PAGE HERO (INNER PAGES) ========================= */
+/* =========================
+   PAGE HERO (INNER PAGES)
+   ========================= */
 .page-hero {
     text-align: center;
     padding: 80px 20px;
