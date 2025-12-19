@@ -1,15 +1,15 @@
 /* =========================
    BRAND COLOR SYSTEM
-   ========================= */
+========================= */
 :root {
-    --gold-primary: #d4af37;   /* Logo, buttons, primary accents */
-    --gold-bright:  #ffd65a;   /* Section headers, highlights */
-    --gold-soft:    #f3d88c;   /* Subtle dividers, page accents */
+    --gold-primary: #d4af37;
+    --gold-bright:  #ffd65a;
+    --gold-soft:    #f3d88c;
 }
 
 /* =========================
    GLOBAL
-   ========================= */
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -20,15 +20,14 @@ body {
     font-family: Arial, sans-serif;
     background: #0d0d0d;
     color: #fff;
-    overflow-x: hidden;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* =========================
    HEADER
-   ========================= */
+========================= */
 header {
-    width: 100%;
     background: #000;
     border-bottom: 2px solid var(--gold-primary);
     padding: 18px 40px;
@@ -44,15 +43,13 @@ header {
     font-size: 26px;
     font-weight: bold;
     color: var(--gold-primary);
-    letter-spacing: 1px;
 }
 
 nav a {
     color: #fff;
     margin-left: 25px;
-    font-size: 16px;
     text-decoration: none;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 nav a:hover {
@@ -60,97 +57,127 @@ nav a:hover {
 }
 
 /* =========================
-   HERO SECTION
-   ========================= */
+   HERO
+========================= */
 .hero {
-    text-align: center;
     padding: 140px 20px;
+    min-height: 90vh;
     background:
         radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 60%),
         linear-gradient(to bottom, #0f0f0f, #0a0a0a);
-    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .hero-inner {
     max-width: 900px;
-    margin: 0 auto;
 }
 
 .hero h1 {
     font-size: 42px;
-    font-weight: 700;
-    line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .hero-subtext {
     font-size: 18px;
     color: #ccc;
-    max-width: 720px;
-    margin: 0 auto 40px;
+    margin-bottom: 40px;
 }
-
 
 /* =========================
    BUTTONS
-   ========================= */
+========================= */
 .btn {
-    display: inline-block;
     background: var(--gold-primary);
-    padding: 14px 36px;
     color: #000;
+    padding: 14px 36px;
     border-radius: 6px;
-    margin-top: 40px;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
     transition: 0.3s;
-    max-width: 260px;
-    width: auto;
 }
 
 .btn:hover {
     background: var(--gold-bright);
 }
-/* =========================
-   PRIMARY CTA BUTTON (HERO)
-   ========================= */
+
 .btn.primary {
     padding: 16px 42px;
-    font-size: 16px;
-    letter-spacing: 0.5px;
 }
 
 .btn.primary:hover {
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+    box-shadow: 0 0 25px rgba(212,175,55,0.35);
 }
 
 /* =========================
    SECTIONS
-   ========================= */
+========================= */
 .section {
     padding: 100px 40px;
     text-align: center;
-    background: #0d0d0d;
-}
-
-.hero + .section {
-    border-top: 1px solid var(--gold-soft);
 }
 
 .section h2 {
     font-size: 32px;
-    margin-bottom: 25px;
     color: var(--gold-bright);
+    margin-bottom: 25px;
+}
+
+.section-intro {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    color: #ccc;
 }
 
 /* =========================
-   PROGRAM GRID
-   ========================= */
+   WHY
+========================= */
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.why-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold-primary);
+}
+
+.why-card h3 {
+    color: var(--gold-bright);
+    margin-bottom: 12px;
+}
+
+/* =========================
+   DIVIDER
+========================= */
+.section-divider {
+    width: 80px;
+    height: 3px;
+    background: var(--gold-soft);
+    margin: 0 auto;
+    opacity: 0.6;
+}
+
+/* =========================
+   PROGRAMS
+========================= */
 .program-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
-    margin-top: 35px;
 }
 
 .program-card {
@@ -168,14 +195,12 @@ nav a:hover {
 }
 
 .program-card h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
     color: var(--gold-bright);
 }
 
 /* =========================
    CAROUSEL
-   ========================= */
+========================= */
 .carousel-container {
     position: relative;
     width: 92%;
@@ -193,164 +218,19 @@ nav a:hover {
     margin: 0 20px;
 }
 
-.slide img {
+.slide img,
+.slide video {
     width: 100%;
     border-radius: 10px;
-    object-fit: cover;
-}
-
-/* =========================
-   CAROUSEL BUTTONS
-   ========================= */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--gold-primary);
-    color: #000;
-    font-size: 22px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    padding: 10px 15px;
-    transition: 0.3s;
-}
-
-.carousel-btn:hover {
-    background: var(--gold-bright);
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-/* =========================
-   FULL GALLERY GRID
-   ========================= */
-.gallery-grid {
-    width: 92%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    padding-bottom: 40px;
-}
-
-.gallery-grid img {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid #333;
-    transition: 0.3s;
-}
-
-.gallery-grid img:hover {
-    transform: scale(1.05);
-    border-color: var(--gold-bright);
 }
 
 /* =========================
    FOOTER
-   ========================= */
+========================= */
 footer {
-    text-align: center;
-    padding: 40px 20px;
-    margin-top: 40px;
     border-top: 2px solid #222;
+    padding: 40px 20px;
+    text-align: center;
     font-size: 14px;
     color: #aaa;
-}
-
-/* =========================
-   ANIMATIONS
-   ========================= */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* =========================
-   PAGE HERO (INNER PAGES)
-   ========================= */
-.page-hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: #111;
-    border-bottom: 2px solid var(--gold-soft);
-}
-
-.page-hero h1 {
-    font-size: 2.5rem;
-    color: var(--gold-soft);
-}
-
-.page-hero p {
-    font-size: 1.2rem;
-    color: #ddd;
-    max-width: 650px;
-    margin: 10px auto 0;
-}
-/* =========================
-   CONTACT SECTION UPGRADE
-   ========================= */
-.contact-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 100px 40px;
-    background: #0d0d0d;
-    border-top: 1px solid var(--gold-soft);
-}
-
-.contact-box {
-    flex: 1 1 320px;
-    max-width: 500px;
-    background: #1a1a1a;
-    border: 1px solid var(--gold-primary);
-    border-radius: 12px;
-    padding: 40px;
-    text-align: left;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
-    transition: 0.3s ease;
-}
-
-.contact-box:hover {
-    border-color: var(--gold-bright);
-    transform: translateY(-5px);
-}
-
-.contact-box h3 {
-    color: var(--gold-bright);
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.contact-box p {
-    font-size: 16px;
-    color: #ccc;
-    margin-bottom: 10px;
-    line-height: 1.6;
-}
-
-.contact-box a {
-    display: inline-block;
-    margin-top: 20px;
-    font-weight: bold;
-    color: var(--gold-primary);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--gold-primary);
-    transition: 0.3s;
-}
-
-.contact-box a:hover {
-    color: var(--gold-bright);
-    border-color: var(--gold-bright);
 }
