@@ -142,48 +142,26 @@ nav a:hover {
     text-align: center;
 }
 
+.section-intro {
+    max-width: 720px;
+    margin: 0 auto 50px;
+    color: #ccc;
+}
+
 .center {
     margin-top: 50px;
 }
 
 /* =========================
-   WHY GRID
+   INVOLVEMENT PAGE
 ========================= */
-.why-grid {
+.involvement-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
-
-.why-card {
-    background: #1a1a1a;
-    border: 1px solid #333;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: left;
-    transition: 0.3s;
-}
-
-.why-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--gold-primary);
-}
-
-.why-card h3 {
-    color: var(--gold-bright);
-    margin-bottom: 12px;
-}
-
-/* =========================
-   PROGRAMS PAGE
-========================= */
-.programs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 35px;
 }
 
-.programs-card {
+.involvement-card {
     background: #141414;
     border: 1px solid #333;
     border-radius: 14px;
@@ -192,40 +170,72 @@ nav a:hover {
     transition: 0.35s ease;
 }
 
-.programs-card:hover {
+.involvement-card:hover {
     transform: translateY(-8px);
     border-color: var(--gold-primary);
 }
 
-.programs-card h3 {
+.involvement-card h3 {
     color: var(--gold-bright);
+    margin-bottom: 12px;
     font-size: 22px;
-    margin-bottom: 10px;
 }
 
-.program-tag {
-    display: inline-block;
-    background: rgba(212,175,55,0.15);
-    color: var(--gold-soft);
-    font-size: 13px;
-    padding: 4px 10px;
-    border-radius: 20px;
-    margin-bottom: 15px;
-}
-
-.programs-card p {
+.involvement-card p {
     color: #ccc;
     margin-bottom: 15px;
 }
 
-.programs-card ul {
+.involvement-card ul {
     list-style: none;
-    padding-left: 0;
+    margin-bottom: 20px;
 }
 
-.programs-card ul li {
+.involvement-card ul li {
     margin-bottom: 8px;
     color: #ddd;
+}
+
+.involvement-card .btn {
+    margin-top: 10px;
+}
+
+/* Highlight primary sponsor path */
+.involvement-card.highlight {
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 30px rgba(212,175,55,0.15);
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(212,175,55,0.2);
+    color: var(--gold-soft);
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   CTA BLOCK
+========================= */
+.cta-block {
+    background: #111;
+    padding: 90px 30px;
+    text-align: center;
+    border-top: 2px solid var(--gold-soft);
+}
+
+.cta-block h2 {
+    font-size: 32px;
+    color: var(--gold-bright);
+    margin-bottom: 20px;
+}
+
+.cta-block p {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: #ccc;
 }
 
 /* =========================
