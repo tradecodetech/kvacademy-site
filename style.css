@@ -1,10 +1,10 @@
 /* =========================
-   BRAND COLOR SYSTEM
+   BRAND COLORS
 ========================= */
 :root {
     --gold-primary: #d4af37;
-    --gold-bright:  #ffd65a;
-    --gold-soft:    #f3d88c;
+    --gold-bright: #ffd65a;
+    --gold-soft: #f3d88c;
 }
 
 /* =========================
@@ -87,6 +87,28 @@ nav a:hover {
 }
 
 /* =========================
+   PAGE HERO
+========================= */
+.page-hero {
+    padding: 90px 20px;
+    text-align: center;
+    background: #111;
+    border-bottom: 2px solid var(--gold-soft);
+}
+
+.page-hero h1 {
+    font-size: 36px;
+    color: var(--gold-bright);
+}
+
+.page-hero p {
+    font-size: 18px;
+    color: #ccc;
+    max-width: 700px;
+    margin: 15px auto 0;
+}
+
+/* =========================
    BUTTONS
 ========================= */
 .btn {
@@ -120,20 +142,12 @@ nav a:hover {
     text-align: center;
 }
 
-.section h2 {
-    font-size: 32px;
-    color: var(--gold-bright);
-    margin-bottom: 25px;
-}
-
-.section-intro {
-    max-width: 720px;
-    margin: 0 auto 40px;
-    color: #ccc;
+.center {
+    margin-top: 50px;
 }
 
 /* =========================
-   WHY
+   WHY GRID
 ========================= */
 .why-grid {
     display: grid;
@@ -161,67 +175,57 @@ nav a:hover {
 }
 
 /* =========================
-   DIVIDER
+   PROGRAMS PAGE
 ========================= */
-.section-divider {
-    width: 80px;
-    height: 3px;
-    background: var(--gold-soft);
-    margin: 0 auto;
-    opacity: 0.6;
-}
-
-/* =========================
-   PROGRAMS
-========================= */
-.program-grid {
+.programs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
 }
 
-.program-card {
-    background: #1a1a1a;
-    padding: 25px;
-    border-radius: 10px;
+.programs-card {
+    background: #141414;
     border: 1px solid #333;
+    border-radius: 14px;
+    padding: 35px;
     text-align: left;
-    transition: 0.3s;
+    transition: 0.35s ease;
 }
 
-.program-card:hover {
-    transform: translateY(-6px);
+.programs-card:hover {
+    transform: translateY(-8px);
     border-color: var(--gold-primary);
 }
 
-.program-card h3 {
+.programs-card h3 {
     color: var(--gold-bright);
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
-/* =========================
-   CAROUSEL
-========================= */
-.carousel-container {
-    position: relative;
-    width: 92%;
-    margin: 40px auto;
-    overflow: hidden;
+.program-tag {
+    display: inline-block;
+    background: rgba(212,175,55,0.15);
+    color: var(--gold-soft);
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 15px;
 }
 
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease;
+.programs-card p {
+    color: #ccc;
+    margin-bottom: 15px;
 }
 
-.slide {
-    min-width: 300px;
-    margin: 0 20px;
+.programs-card ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-.slide img,
-.slide video {
-    width: 100%;
-    border-radius: 10px;
+.programs-card ul li {
+    margin-bottom: 8px;
+    color: #ddd;
 }
 
 /* =========================
