@@ -25,7 +25,7 @@ body {
 }
 
 /* =========================
-   TYPOGRAPHY RHYTHM (FIX)
+   TYPOGRAPHY RHYTHM
 ========================= */
 h1 { margin-bottom: 24px; }
 h2 { margin-bottom: 28px; }
@@ -168,119 +168,60 @@ nav a:hover {
 }
 
 /* =========================
-   DIVIDER
+   CAROUSEL (FIXED)
 ========================= */
-.section-divider {
-    width: 90px;
-    height: 3px;
-    background: var(--gold-soft);
-    margin: 0 auto;
-    opacity: 0.6;
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.45s ease-in-out;
+    will-change: transform;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 300px;
+    margin: 0 20px;
+}
+
+.slide img,
+.slide video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
 }
 
 /* =========================
-   PROGRAMS PAGE (FIXED)
+   CAROUSEL BUTTONS
 ========================= */
-.programs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 45px;
-}
-
-.programs-card {
-    background: #141414;
-    border: 1px solid #333;
-    border-radius: 16px;
-    padding: 40px;
-    text-align: left;
-    transition: 0.35s ease;
-}
-
-.programs-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--gold-primary);
-}
-
-.programs-card h3 {
-    color: var(--gold-bright);
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--gold-primary);
+    color: #000;
+    border: none;
+    border-radius: 50%;
     font-size: 22px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10;
 }
 
-.program-tag {
-    display: inline-block;
-    margin-bottom: 18px;
-    background: rgba(212,175,55,0.15);
-    color: var(--gold-soft);
-    font-size: 13px;
-    padding: 5px 12px;
-    border-radius: 20px;
+.carousel-btn:hover {
+    background: var(--gold-bright);
 }
 
-/* =========================
-   INVOLVEMENT PAGE
-========================= */
-.involvement-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 45px;
-}
-
-.involvement-card {
-    background: #141414;
-    border: 1px solid #333;
-    border-radius: 16px;
-    padding: 40px;
-    text-align: left;
-    transition: 0.35s ease;
-}
-
-.involvement-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--gold-primary);
-}
-
-.involvement-card h3 {
-    color: var(--gold-bright);
-    font-size: 22px;
-}
-
-.involvement-card ul {
-    margin-top: 20px;
-}
-
-.involvement-card.highlight {
-    border-color: var(--gold-primary);
-    box-shadow: 0 0 30px rgba(212,175,55,0.15);
-}
-
-.badge {
-    display: inline-block;
-    margin-bottom: 16px;
-    background: rgba(212,175,55,0.2);
-    color: var(--gold-soft);
-    font-size: 12px;
-    padding: 5px 12px;
-    border-radius: 20px;
-}
-
-/* =========================
-   CTA BLOCK
-========================= */
-.cta-block {
-    background: #111;
-    padding: 100px 30px;
-    text-align: center;
-    border-top: 2px solid var(--gold-soft);
-}
-
-.cta-block h2 {
-    font-size: 32px;
-}
-
-.cta-block p {
-    max-width: 700px;
-    margin: 0 auto 40px;
-}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
 
 /* =========================
    FOOTER

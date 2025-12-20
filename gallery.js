@@ -1,29 +1,52 @@
-// ============================
-// MINI CAROUSEL FOR HOMEPAGE
-// ============================
-
 document.addEventListener("DOMContentLoaded", () => {
     const track = document.querySelector(".carousel-track");
-    const slides = document.querySelectorAll(".carousel-track .slide");
-    const nextBtn = document.querySelector(".next");
-    const prevBtn = document.querySelector(".prev");
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    const prevBtn = document.querySelector(".carousel-btn.prev");
+    const nextBtn = document.querySelector(".carousel-btn.next");
 
-    // If this page does NOT have a carousel, stop
-    if (!track || slides.length === 0) return;
+    let currentIndex = 0;
+    let slideWidth = 0;
 
-    let index = 0;
-    const total = slides.length;
-
-    function showSlide(i) {
-        index = (i + total) % total;
-        track.style.transform = `translateX(-${index * 100}%)`;
+    function calculateSlideWidth() {
+        if (!slides.length) return;
+        const slide = slides[0];
+        const style = window.getComputedStyle(slide);
+        const margin =
+            parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+        slideWidth = slide.offsetWidth + margin;
     }
 
-    nextBtn.addEventListener("click", () => showSlide(index + 1));
-    prevBtn.addEventListener("click", () => showSlide(index - 1));
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
 
-    // OPTIONAL AUTOSCROLL
-    setInterval(() => {
-        showSlide(index + 1);
-    }, 5000);
+    function nextSlide() {
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = slides.length - 1;
+        }
+        updateCarousel();
+    }
+
+    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide);
+
+    window.addEventListener("resize", () => {
+        calculateSlideWidth();
+        updateCarousel();
+    });
+
+    // Init
+    calculateSlideWidth();
+    updateCarousel();
 });
