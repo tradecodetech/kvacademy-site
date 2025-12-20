@@ -20,8 +20,30 @@ body {
     font-family: Arial, sans-serif;
     background: #0d0d0d;
     color: #fff;
-    line-height: 1.6;
+    line-height: 1.7;
     overflow-x: hidden;
+}
+
+/* =========================
+   TYPOGRAPHY RHYTHM (FIX)
+========================= */
+h1 { margin-bottom: 24px; }
+h2 { margin-bottom: 28px; }
+h3 { margin-bottom: 12px; }
+
+p {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+ul {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding-left: 18px;
+}
+
+li {
+    margin-bottom: 10px;
 }
 
 /* =========================
@@ -77,13 +99,12 @@ nav a:hover {
 
 .hero h1 {
     font-size: 42px;
-    margin-bottom: 20px;
 }
 
 .hero-subtext {
     font-size: 18px;
-    color: #ccc;
-    margin-bottom: 40px;
+    max-width: 720px;
+    margin: 0 auto 40px;
 }
 
 /* =========================
@@ -103,9 +124,8 @@ nav a:hover {
 
 .page-hero p {
     font-size: 18px;
-    color: #ccc;
     max-width: 700px;
-    margin: 15px auto 0;
+    margin: 0 auto;
 }
 
 /* =========================
@@ -138,18 +158,62 @@ nav a:hover {
    SECTIONS
 ========================= */
 .section {
-    padding: 100px 40px;
+    padding: 110px 40px;
     text-align: center;
 }
 
 .section-intro {
     max-width: 720px;
-    margin: 0 auto 50px;
-    color: #ccc;
+    margin: 0 auto 60px;
 }
 
-.center {
-    margin-top: 50px;
+/* =========================
+   DIVIDER
+========================= */
+.section-divider {
+    width: 90px;
+    height: 3px;
+    background: var(--gold-soft);
+    margin: 0 auto;
+    opacity: 0.6;
+}
+
+/* =========================
+   PROGRAMS PAGE (FIXED)
+========================= */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 45px;
+}
+
+.programs-card {
+    background: #141414;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: left;
+    transition: 0.35s ease;
+}
+
+.programs-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold-primary);
+}
+
+.programs-card h3 {
+    color: var(--gold-bright);
+    font-size: 22px;
+}
+
+.program-tag {
+    display: inline-block;
+    margin-bottom: 18px;
+    background: rgba(212,175,55,0.15);
+    color: var(--gold-soft);
+    font-size: 13px;
+    padding: 5px 12px;
+    border-radius: 20px;
 }
 
 /* =========================
@@ -158,14 +222,14 @@ nav a:hover {
 .involvement-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 35px;
+    gap: 45px;
 }
 
 .involvement-card {
     background: #141414;
     border: 1px solid #333;
-    border-radius: 14px;
-    padding: 35px;
+    border-radius: 16px;
+    padding: 40px;
     text-align: left;
     transition: 0.35s ease;
 }
@@ -177,30 +241,13 @@ nav a:hover {
 
 .involvement-card h3 {
     color: var(--gold-bright);
-    margin-bottom: 12px;
     font-size: 22px;
 }
 
-.involvement-card p {
-    color: #ccc;
-    margin-bottom: 15px;
-}
-
 .involvement-card ul {
-    list-style: none;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-.involvement-card ul li {
-    margin-bottom: 8px;
-    color: #ddd;
-}
-
-.involvement-card .btn {
-    margin-top: 10px;
-}
-
-/* Highlight primary sponsor path */
 .involvement-card.highlight {
     border-color: var(--gold-primary);
     box-shadow: 0 0 30px rgba(212,175,55,0.15);
@@ -208,12 +255,12 @@ nav a:hover {
 
 .badge {
     display: inline-block;
+    margin-bottom: 16px;
     background: rgba(212,175,55,0.2);
     color: var(--gold-soft);
     font-size: 12px;
-    padding: 4px 10px;
+    padding: 5px 12px;
     border-radius: 20px;
-    margin-bottom: 10px;
 }
 
 /* =========================
@@ -221,21 +268,18 @@ nav a:hover {
 ========================= */
 .cta-block {
     background: #111;
-    padding: 90px 30px;
+    padding: 100px 30px;
     text-align: center;
     border-top: 2px solid var(--gold-soft);
 }
 
 .cta-block h2 {
     font-size: 32px;
-    color: var(--gold-bright);
-    margin-bottom: 20px;
 }
 
 .cta-block p {
     max-width: 700px;
-    margin: 0 auto 35px;
-    color: #ccc;
+    margin: 0 auto 40px;
 }
 
 /* =========================
