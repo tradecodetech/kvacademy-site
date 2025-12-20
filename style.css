@@ -38,12 +38,12 @@ body {
 /* =========================
    TYPOGRAPHY RHYTHM
 ========================= */
-h1 { margin-bottom: 24px; }
-h2 { margin-bottom: 18px; }
-h3 { margin-bottom: 12px; }
+h1 { margin-bottom: 28px; }
+h2 { margin-bottom: 22px; }
+h3 { margin-bottom: 14px; }
 
 p {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     color: #ccc;
 }
 
@@ -51,8 +51,20 @@ p {
    CONTENT WIDTH CONTROL
 ========================= */
 .content-wrap {
-    max-width: 900px;
+    max-width: 860px;
     margin: 0 auto;
+}
+
+/* =========================
+   SECTION DIVIDER (NEW)
+========================= */
+.section-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--gold-soft);
+    margin: 26px auto 36px;
+    border-radius: 3px;
+    opacity: 0.85;
 }
 
 /* =========================
@@ -155,10 +167,6 @@ nav a:hover {
     background: var(--gold-bright);
 }
 
-.btn.primary {
-    padding: 16px 42px;
-}
-
 .btn.primary:hover {
     box-shadow: 0 0 25px rgba(212,175,55,0.35);
 }
@@ -172,64 +180,9 @@ nav a:hover {
 }
 
 .section-intro {
-    max-width: 720px;
-    margin: 0 auto 50px;
+    max-width: 700px;
+    margin: 0 auto 60px;
 }
-
-/* =========================
-   CAROUSEL
-========================= */
-.carousel-container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 60px auto;
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.45s ease-in-out;
-    will-change: transform;
-}
-
-.slide {
-    flex: 0 0 auto;
-    width: 300px;
-    margin: 0 20px;
-}
-
-.slide img,
-.slide video {
-    width: 100%;
-    border-radius: 12px;
-    object-fit: cover;
-}
-
-/* =========================
-   CAROUSEL BUTTONS
-========================= */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: var(--gold-primary);
-    color: #000;
-    border: none;
-    border-radius: 50%;
-    font-size: 22px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.3s;
-    z-index: 10;
-}
-
-.carousel-btn:hover {
-    background: var(--gold-bright);
-}
-
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
 
 /* =========================
    PROGRAMS PAGE
@@ -258,20 +211,17 @@ nav a:hover {
 
 .program-block h2 {
     color: var(--gold-bright);
+    margin-bottom: 10px;
 }
 
 .program-tag {
     display: inline-block;
     font-size: 13px;
-    color: #000;
     background: var(--gold-primary);
+    color: #000;
     padding: 6px 12px;
     border-radius: 20px;
-    margin-bottom: 16px;
-}
-
-.program-list {
-    margin-top: 15px;
+    margin-bottom: 18px;
 }
 
 .program-list li {
@@ -320,6 +270,7 @@ nav a:hover {
 
 .engagement-card h2 {
     color: var(--gold-bright);
+    margin-bottom: 12px;
 }
 
 .engagement-list li {
@@ -390,11 +341,6 @@ footer {
 
     .section {
         padding: 80px 20px;
-    }
-
-    .slide {
-        width: 240px;
-        margin: 0 12px;
     }
 
     footer {
