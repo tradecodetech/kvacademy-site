@@ -273,3 +273,131 @@ nav a:hover {
 .program-list {
     margin-top: 15px;
 }
+
+.program-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: #ddd;
+}
+
+.program-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--gold-primary);
+    font-weight: bold;
+}
+
+/* =========================
+   ENGAGEMENT / GET INVOLVED
+========================= */
+.engagement-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.engagement-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 14px;
+    padding: 40px;
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.engagement-card.primary {
+    border-color: var(--gold-primary);
+}
+
+.engagement-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold-bright);
+}
+
+.engagement-card h2 {
+    color: var(--gold-bright);
+}
+
+.engagement-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: #ddd;
+}
+
+.engagement-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--gold-primary);
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    border-top: 2px solid #222;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 16px 20px;
+    }
+
+    nav {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 100px 20px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-subtext {
+        font-size: 16px;
+    }
+
+    .page-hero h1 {
+        font-size: 28px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .slide {
+        width: 240px;
+        margin: 0 12px;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+}
