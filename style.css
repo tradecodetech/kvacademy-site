@@ -8,7 +8,7 @@
 }
 
 /* =========================
-   GLOBAL
+   GLOBAL RESET
 ========================= */
 * {
     margin: 0;
@@ -16,6 +16,17 @@
     box-sizing: border-box;
 }
 
+/* GLOBAL LIST RESET (CRITICAL) */
+ul,
+li {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* =========================
+   BODY
+========================= */
 body {
     font-family: Arial, sans-serif;
     background: #0d0d0d;
@@ -28,22 +39,20 @@ body {
    TYPOGRAPHY RHYTHM
 ========================= */
 h1 { margin-bottom: 24px; }
-h2 { margin-bottom: 28px; }
+h2 { margin-bottom: 18px; }
 h3 { margin-bottom: 12px; }
 
 p {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     color: #ccc;
 }
 
-ul {
-    margin-top: 15px;
-    margin-bottom: 30px;
-    padding-left: 18px;
-}
-
-li {
-    margin-bottom: 10px;
+/* =========================
+   CONTENT WIDTH CONTROL
+========================= */
+.content-wrap {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 /* =========================
@@ -164,11 +173,11 @@ nav a:hover {
 
 .section-intro {
     max-width: 720px;
-    margin: 0 auto 60px;
+    margin: 0 auto 50px;
 }
 
 /* =========================
-   CAROUSEL (FIXED)
+   CAROUSEL
 ========================= */
 .carousel-container {
     position: relative;
@@ -193,7 +202,6 @@ nav a:hover {
 .slide img,
 .slide video {
     width: 100%;
-    height: auto;
     border-radius: 12px;
     object-fit: cover;
 }
@@ -224,147 +232,6 @@ nav a:hover {
 .carousel-btn.next { right: 10px; }
 
 /* =========================
-   FOOTER
-========================= */
-footer {
-    border-top: 2px solid #222;
-    padding: 40px 20px;
-    text-align: center;
-    font-size: 14px;
-    color: #aaa;
-}
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-
-    /* HEADER */
-    header {
-        flex-direction: column;
-        padding: 16px 20px;
-    }
-
-    nav {
-        margin-top: 12px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    nav a {
-        margin: 0;
-        font-size: 15px;
-    }
-
-    /* HERO */
-    .hero {
-        padding: 100px 20px;
-        min-height: auto;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-        line-height: 1.25;
-    }
-
-    .hero-subtext {
-        font-size: 16px;
-        margin-bottom: 30px;
-    }
-
-    /* PAGE HERO */
-    .page-hero {
-        padding: 70px 20px;
-    }
-
-    .page-hero h1 {
-        font-size: 28px;
-    }
-
-    .page-hero p {
-        font-size: 16px;
-    }
-
-    /* SECTIONS */
-    .section {
-        padding: 80px 20px;
-    }
-
-    .section h2 {
-        font-size: 26px;
-    }
-
-    .section-intro {
-        font-size: 16px;
-        margin-bottom: 40px;
-    }
-
-    /* PROGRAM GRID */
-    .program-grid {
-        gap: 20px;
-    }
-
-    .program-card {
-        padding: 22px;
-    }
-
-    .program-card h3 {
-        font-size: 18px;
-    }
-
-    /* WHY / VALUE CARDS */
-    .why-grid {
-        gap: 20px;
-    }
-
-    .why-card {
-        padding: 24px;
-    }
-
-    /* BUTTONS */
-    .btn {
-        padding: 14px 28px;
-        font-size: 15px;
-        margin-top: 30px;
-    }
-
-    .btn.primary {
-        padding: 16px 34px;
-    }
-
-    /* CAROUSEL */
-    .carousel-container {
-        width: 100%;
-        margin: 40px auto;
-    }
-
-    .slide {
-        width: 240px;
-        margin: 0 12px;
-    }
-
-    .carousel-btn {
-        font-size: 18px;
-        padding: 8px 12px;
-    }
-
-    /* CONTACT / INVOLVEMENT */
-    .contact-section {
-        padding: 80px 20px;
-    }
-
-    .contact-box {
-        padding: 30px;
-    }
-
-    /* FOOTER */
-    footer {
-        padding: 30px 15px;
-        font-size: 13px;
-    }
-}
-/* =========================
    PROGRAMS PAGE
 ========================= */
 .programs-wrapper {
@@ -391,91 +258,18 @@ footer {
 
 .program-block h2 {
     color: var(--gold-bright);
-    margin-bottom: 8px;
 }
 
 .program-tag {
     display: inline-block;
     font-size: 13px;
-    letter-spacing: 0.5px;
     color: #000;
     background: var(--gold-primary);
     padding: 6px 12px;
     border-radius: 20px;
-    margin-bottom: 18px;
-}
-
-.program-block p {
-    color: #ccc;
-    max-width: 720px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .program-list {
-    list-style: none;
-    padding-left: 0;
     margin-top: 15px;
-}
-
-.program-list li {
-    position:
-/* =========================
-   ENGAGEMENT / GET INVOLVED
-========================= */
-.engagement-wrapper {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-}
-
-.engagement-card {
-    background: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 14px;
-    padding: 40px;
-    text-align: left;
-    transition: 0.3s ease;
-}
-
-.engagement-card.primary {
-    border-color: var(--gold-primary);
-}
-
-.engagement-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--gold-bright);
-}
-
-.engagement-card h2 {
-    color: var(--gold-bright);
-    margin-bottom: 10px;
-}
-
-.engagement-card p {
-    color: #ccc;
-    max-width: 720px;
-    margin-bottom: 20px;
-}
-
-.engagement-list {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 30px;
-}
-
-.engagement-list li {
-    position: relative;
-    padding-left: 28px;
-    margin-bottom: 12px;
-    color: #ddd;
-}
-
-.engagement-list li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--gold-primary);
-    font-weight: bold;
 }
