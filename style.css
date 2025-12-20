@@ -419,3 +419,63 @@ footer {
 
 .program-list li {
     position:
+/* =========================
+   ENGAGEMENT / GET INVOLVED
+========================= */
+.engagement-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.engagement-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 14px;
+    padding: 40px;
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.engagement-card.primary {
+    border-color: var(--gold-primary);
+}
+
+.engagement-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold-bright);
+}
+
+.engagement-card h2 {
+    color: var(--gold-bright);
+    margin-bottom: 10px;
+}
+
+.engagement-card p {
+    color: #ccc;
+    max-width: 720px;
+    margin-bottom: 20px;
+}
+
+.engagement-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.engagement-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    color: #ddd;
+}
+
+.engagement-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--gold-primary);
+    font-weight: bold;
+}
