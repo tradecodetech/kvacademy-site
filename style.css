@@ -390,3 +390,69 @@ footer {
         font-size: 13px;
     }
 }
+/* =========================
+   MICRO-INTERACTIONS
+========================= */
+
+/* Smooth global transitions */
+* {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* =========================
+   BUTTON INTERACTION
+========================= */
+.btn {
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* =========================
+   CARD HOVER POLISH
+========================= */
+.program-block,
+.engagement-card {
+    will-change: transform, box-shadow;
+}
+
+.program-block:hover,
+.engagement-card:hover {
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.6),
+        0 0 18px rgba(212, 175, 55, 0.12);
+}
+
+/* =========================
+   SECTION FADE-IN (SCROLL)
+========================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   HEADER SHADOW ON SCROLL
+========================= */
+header.scrolled {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+}
